@@ -1,0 +1,281 @@
+/* Estilos globales */
+* {
+  background: #E5E5E5; /* Color de fondo para todos los elementos */
+  font-family: 'Inter'; /* Fuente para todos los elementos */
+  font-weight: 400; /* Peso de la fuente */
+  font-size: 32px; /* Tamaño de la fuente */
+  line-height: 150%; /* Altura de línea */
+}
+
+/* Estilos del logo */
+.logo {
+  padding-top: 10px; /* Espaciado superior */
+  margin-left: 10px; /* Margen izquierdo */
+  margin-top: 20px; /* Margen superior */
+  width: 8%; /* Ancho del logo */
+}
+
+/* Efecto de escala al pasar el mouse sobre el logo */
+.logo:hover {
+   transform: scale(2.2); /* Escala la imagen al 220% cuando se pasa el mouse sobre ella */
+}
+
+/* Estilos del contenido principal */
+main {
+  display: flex; /* Muestra el contenido principal como un flexbox */
+  margin-bottom: 20px; /* Margen inferior */
+  margin-left: 80px; /* Margen izquierdo */
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos del área de entrada de texto */
+.entrada-texto {
+  resize: none; /* Evita que el usuario redimensione el área de texto */
+  margin-top: 90px; /* Margen superior */
+  color:rgb(17, 17, 26);; /* Color del texto */
+  border: none; /* Sin borde */
+}
+
+/* Estilos del placeholder del área de entrada de texto */
+.entrada-texto::placeholder {
+  color: rgb(17, 17, 26); /* Color del placeholder */
+}
+
+/* Estilos al enfocar el área de entrada de texto */
+.entrada-texto:focus {
+  outline: none; /* Quita el contorno al enfocar */
+}
+
+/* Estilos del área de salida de texto */
+.salida-texto {
+  resize: none; /* Evita que el usuario redimensione el área de texto */
+  margin-left: 98px; /* Margen izquierdo */
+  padding: 20px; /* Relleno */
+  padding-bottom: 120px; /* Relleno inferior */
+  height: 612px; /* Altura */
+  color: rgb(72, 72, 184); /* Color del texto */
+  background: white; /* Fondo blanco */
+  background-image: url(imagenes/Muñeco.jpg); /* Imagen de fondo */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  background-position: center; /* Posición de la imagen */
+  border: none; /* Sin borde */
+  border-radius: 32px; /* Borde redondeado */
+}
+
+/* Estilos al enfocar el área de salida de texto */
+.salida-texto:focus {
+  outline: none; /* Quita el contorno al enfocar */
+}
+
+/* Estilos del mensaje de restricción */
+.restriccion {
+  color: grey; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilos de los botones */
+.botones {
+  display: flex; /* Muestra los botones como un flexbox */
+  margin-top: 18px; /* Margen superior */
+}
+
+/* Estilos del botón de encriptar */
+.encriptar {
+  color: #D8DFE8; /* Color del texto */
+  background: rgb(72, 72, 184); /* Fondo */
+  border: 1px solid rgb(72, 72, 184); /* Borde */
+  border-radius: 25px; /* Borde redondeado */
+  cursor: pointer; /* Cursor */
+  height: 67px; /* Altura */
+  width: 328px; /* Ancho */
+}
+
+/* Estilos del botón de desencriptar */
+.desencriptar {
+  color: rgb(72, 72, 184); /* Color del texto */
+  background: #D8DFE8; /* Fondo */
+  border: 1px solid rgb(72, 72, 184); /* Borde */
+  border-radius: 25px; /* Borde redondeado */
+  cursor: pointer; /* Cursor */
+  height: 67px; /* Altura */
+  margin-left: 30px; /* Margen izquierdo */
+  width: 328px; /* Ancho */
+}
+
+/* Estilos del área dinámica */
+.dinamico {
+  background: transparent; /* Fondo transparente */
+  margin-left: 120px; /* Margen izquierdo */
+  margin-top: -240px; /* Margen superior negativo */
+  width: 360px; /* Ancho */
+  position: absolute; /* Posición absoluta */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilos del primer mensaje dinámico */
+.texto1 {
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Peso de la fuente */
+  line-height: initial; /* Altura de línea */
+  background: transparent; /* Fondo transparente */
+}
+
+/* Estilos del segundo mensaje dinámico */
+.texto2 {
+  font-size: 16px; /* Tamaño de la fuente */
+  line-height: initial; /* Altura de línea */
+  background: transparent; /* Fondo transparente */
+}
+
+/* Estilos del botón de copiar */
+.copiar {
+  color: rgb(72, 72, 184); /* Color del texto */
+  background: #D8DFE8; /* Fondo */
+  border: 1px solid rgb(72, 72, 184); /* Borde */
+  border-radius: 25px; /* Borde redondeado */
+  cursor: pointer; /* Cursor */
+  height: 67px; /* Altura */
+  width: 336px; /* Ancho */
+  margin-top: 120px; /* Margen superior */
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+.encriptar:hover, .desencriptar:hover, .copiar:hover {
+  background: #555; /* Fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+}
+
+/* Estilos del texto de copiado */
+.CopyText {
+  display: none; /* Ocultar el texto de copiado por defecto */
+  width: 300px; /* Ancho */
+  background-color: #555; /* Fondo */
+  color: #fff; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  border-radius: 10px; /* Borde redondeado */
+  padding: 5px; /* Relleno */
+  position: absolute; /* Posición absoluta */
+  z-index: 1; /* Z-index */
+  bottom: 80px; /* Posición desde abajo */
+  left: 100px; /* Posición desde la izquierda */
+  margin-left: -75px; /* Margen izquierdo */
+  opacity: .6; /* Opacidad */
+}
+
+/* Estilos del pie de página */
+footer {
+  text-align: center; /* Alineación del texto */
+  background-color: rgb(72, 72, 184); /* Fondo */
+  padding: 15px; /* Relleno */
+}
+
+/* Estilos del texto de copyright */
+.copyright {
+  color: #D8DFE8; /* Color del texto */
+  background: transparent; /* Fondo transparente */
+  font-size: 15px; /* Tamaño de la fuente */
+  margin: 10px; /* Margen */
+}
+
+
+/* Estilos para pantallas de tamaño de laptop */
+@media screen and (max-width: 1366px) {
+  main{
+      margin-left: 0px; /* Ajuste de margen izquierdo */
+  }
+  .entrada-texto{
+      margin-top: 50px; /* Ajuste de margen superior */
+      width: 686px; /* Ancho del área de entrada de texto */
+      height: 400px; /* Altura del área de entrada de texto */
+  }
+  .botones, .salida-texto{
+      margin-top: 0px; /* Ajuste de margen superior */
+  }
+  .salida-texto{
+      height: 550px; /* Altura del área de salida de texto */
+  }
+  .dinamico{
+      margin-top: -160px; /* Ajuste de margen superior */
+  }
+  .copiar{
+      margin-top: 60px; /* Ajuste de margen superior */
+  }
+}
+
+/* Estilos para pantallas de tamaño de tablet */
+@media screen and (max-width: 768px) {
+ .logo{
+  width: 15%; /* Ancho del logotipo */
+  margin-top: 40px; /* Ajuste de margen superior */
+ } 
+ main{
+  display: block;
+  margin: 0px 30px; /* Ajuste de margen */
+ }
+ .entrada-texto{
+  margin-top: 60px; /* Ajuste de margen superior */
+  width: 100%; /* Ancho del área de entrada de texto */
+  height: 700px; /* Altura del área de entrada de texto */
+ }
+ .botones{
+  margin-top: 0px; /* Ajuste de margen superior */
+ }
+ .salida-texto{
+  margin: 40px 0px; /* Ajuste de margen */
+  width: 655px; /* Ancho del área de salida de texto */
+  height: 300px; /* Altura del área de salida de texto */
+  background: white; /* Fondo del área de salida de texto */
+ }
+ .dinamico{
+  margin-top: -250px; /* Ajuste de margen superior */
+  margin-left: 0px; /* Ajuste de margen izquierdo */
+  width: 655px; /* Ancho del área dinámica */
+ }
+ .texto1{
+  margin-bottom: .5em; /* Ajuste de margen inferior */
+ }
+ .copiar{
+  margin-top: 100px; /* Ajuste de margen superior */
+ }
+ .CopyText{
+  margin-left: 70px; /* Ajuste de margen izquierdo */
+ }
+}
+
+/* Estilos para pantallas de tamaño de celular */
+@media screen and (max-width: 375px) {
+  .logo{
+      margin-top: 30px; /* Ajuste de margen superior */
+      width: 30%; /* Ancho del logotipo */
+  }
+  .entrada-texto{
+      margin-top: 20px; /* Ajuste de margen superior */
+      height: 340px; /* Altura del área de entrada de texto */
+  }
+  .botones{
+      display: block;
+      margin-top: 0px; /* Ajuste de margen superior */
+  }
+  .encriptar, .desencriptar{
+      width: 100%; /* Ancho de los botones */
+  }
+  .desencriptar{
+      margin-left: 0px; /* Ajuste de margen izquierdo */
+      margin-top: 15px; /* Ajuste de margen superior */
+  }
+  .salida-texto, .dinamico, .copiar{
+      width: 295px; /* Ancho del área de salida de texto, área dinámica y botón de copiar */
+  }
+  .dinamico{
+      margin-left: 10px; /* Ajuste de margen izquierdo */
+  }
+  .salida-texto{
+      padding: 10px; /* Relleno del área de salida de texto */
+      padding-bottom: 120px; /* Relleno inferior del área de salida de texto */
+      height: 180px; /* Altura del área de salida de texto */
+  }
+  .CopyText{
+      width: 285px; /* Ancho del área de CopyText */
+      margin-left: -100px; /* Ajuste de margen izquierdo */
+  }   
+}

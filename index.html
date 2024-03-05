@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador y Desencriptador</title>
+    <!-- Se vincula el archivo CSS para estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Encabezado con el logo -->
+    <header>
+        <img class="logo" src="imagenes/logo.png">
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección para la entrada de texto -->
+        <section>
+            <!-- Área de texto para ingresar el texto a encriptar/desencriptar -->
+            <textarea class="entrada-texto" cols="40" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+            <!-- Div para mostrar restricciones -->
+            <div>
+                <!-- Mensaje de advertencia -->
+                <h6 class="restriccion">⚠ Favor de colocar Solo letras minúsculas y sin acentos. ⚠</h6>
+            </div>
+            <!-- Botones para encriptar y desencriptar -->
+            <div class="botones">
+                <button name="encriptar" class="encriptar" onclick="encriptar()">Encriptar</button>
+                <button name="desencriptar" class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        
+        <!-- Sección para la salida de texto -->
+        <section>
+            <!-- Área de texto para mostrar el resultado -->
+            <textarea class="salida-texto" cols="20" rows="10" disabled></textarea>
+            <!-- Div para mensajes dinámicos -->
+            <div class="dinamico">
+                <!-- Mensaje dinámico de estado -->
+                <h2 class="texto1">Ningún mensaje fue encontrado</h2>
+                <!-- Mensaje dinámico de instrucciones -->
+                <h3 class="texto2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                <!-- Botón para copiar el texto -->
+                <button name="copiar" class="copiar" onclick="copiar()" style="display: none;"><span class="CopyText"></span>Copiar</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Pie de página -->
+    <footer>
+        <!-- Información de copyright y desarrollador -->
+        <p class="copyright">&copy Desarrollado por Paola Rodriguez</p>
+    </footer>
+
+    <!-- Se vincula el archivo JavaScript para la funcionalidad -->
+    <script src="app.js"></script>
+</body>
+</html>
+
